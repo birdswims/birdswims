@@ -14,7 +14,9 @@ export default function Home() {
           <div className="text-9xl">Birdswims</div>
         </div>
 
-        <div className="">hi @birdswims.com</div>
+        <a className="mt-4" href="mailto:hi@birdswims.com">
+          hi@birdswims.com
+        </a>
       </main>
     </div>
   );
