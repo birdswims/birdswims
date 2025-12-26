@@ -18,8 +18,8 @@ const jura = Jura({
 });
 
 export const metadata = {
-  title: "Bird Swims",
-  description: "Bird Swims",
+  title: "Birdswims",
+  description: "Birdswims",
 };
 
 export default function RootLayout({ children }) {
