@@ -35,10 +35,10 @@ const summaryItems = [
 function Section({ title, children }) {
   return (
     <section className="space-y-4">
-      <h2 className="text-2xl font-semibold tracking-tight text-neutral-950">
+      <h2 className="text-2xl font-semibold tracking-tight text-white">
         {title}
       </h2>
-      <div className="space-y-4 text-base leading-7 text-neutral-700">
+      <div className="space-y-4 text-base leading-7 text-slate-300">
         {children}
       </div>
     </section>
@@ -59,29 +59,29 @@ function BulletList({ items }) {
 
 export default function LiveWallpaperPrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-[linear-gradient(180deg,#f6fbff_0%,#ffffff_38%,#f5f1ff_100%)] px-5 py-12 sm:px-8 lg:px-12">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top,#17304d_0%,#08111d_34%,#04070d_100%)] px-5 py-12 sm:px-8 lg:px-12">
       <div className="mx-auto max-w-4xl">
-        <div className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/85 shadow-[0_24px_80px_rgba(35,53,84,0.12)] backdrop-blur">
-          <div className="border-b border-neutral-200/80 px-6 py-10 sm:px-10 lg:px-14">
-            <p className="font-[family-name:var(--font-jura)] text-sm uppercase tracking-[0.28em] text-sky-700">
+        <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/80 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur">
+          <div className="border-b border-white/10 px-6 py-10 sm:px-10 lg:px-14">
+            <p className="font-[family-name:var(--font-jura)] text-sm uppercase tracking-[0.28em] text-cyan-300">
               Live Wallpaper
             </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-neutral-950 sm:text-5xl">
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               Privacy Policy
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-neutral-700">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300">
               This page explains how Live Wallpaper handles information when you
               use the app on iOS.
             </p>
           </div>
 
-          <div className="grid gap-4 border-b border-neutral-200/80 bg-neutral-50/80 px-6 py-6 sm:grid-cols-2 sm:px-10 lg:grid-cols-4 lg:px-14">
+          <div className="grid gap-4 border-b border-white/10 bg-white/5 px-6 py-6 sm:grid-cols-2 sm:px-10 lg:grid-cols-4 lg:px-14">
             {infoItems.map((item) => (
               <div key={item.label} className="space-y-1">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {item.label}
                 </p>
-                <p className="text-sm text-neutral-800">{item.value}</p>
+                <p className="text-sm text-slate-200">{item.value}</p>
               </div>
             ))}
           </div>
@@ -97,7 +97,7 @@ export default function LiveWallpaperPrivacyPolicyPage() {
 
             <Section title="Information We Use">
               <div className="space-y-3">
-                <h3 className="text-lg font-semibold text-neutral-900">
+                <h3 className="text-lg font-semibold text-slate-100">
                   Photos on your device
                 </h3>
                 <p>
@@ -111,7 +111,7 @@ export default function LiveWallpaperPrivacyPolicyPage() {
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-lg font-semibold text-neutral-900">
+                <h3 className="text-lg font-semibold text-slate-100">
                   Store and internet features
                 </h3>
                 <p>
@@ -122,7 +122,7 @@ export default function LiveWallpaperPrivacyPolicyPage() {
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-lg font-semibold text-neutral-900">
+                <h3 className="text-lg font-semibold text-slate-100">
                   Purchases
                 </h3>
                 <p>
@@ -136,7 +136,7 @@ export default function LiveWallpaperPrivacyPolicyPage() {
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-lg font-semibold text-neutral-900">
+                <h3 className="text-lg font-semibold text-slate-100">
                   What we do not collect in the current App
                 </h3>
                 <p>
