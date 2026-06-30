@@ -1,12 +1,12 @@
 export const metadata = {
   title: "Live Wallpaper Privacy Policy | Birdswims",
-  description: "Privacy Policy for the Live Wallpaper app by Birdswims.",
+  description: "Privacy Policy for the Live Wallpaper app by Birdswims LLP.",
 };
 
 const infoItems = [
-  { label: "Last updated", value: "June 30, 2026" },
+  { label: "Last updated", value: "July 1, 2026" },
   { label: "App", value: "Live Wallpaper" },
-  { label: "Developer", value: "Birdswims" },
+  { label: "Developer", value: "Birdswims LLP" },
   { label: "Contact", value: "hi@birdswims.com" },
 ];
 
@@ -57,6 +57,14 @@ function BulletList({ items }) {
   );
 }
 
+function Note({ children }) {
+  return (
+    <p className="rounded-2xl border border-amber-300/20 bg-amber-300/10 px-4 py-3 text-sm leading-6 text-amber-100">
+      {children}
+    </p>
+  );
+}
+
 export default function LiveWallpaperPrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,#17304d_0%,#08111d_34%,#04070d_100%)] px-5 py-12 sm:px-8 lg:px-12">
@@ -70,8 +78,9 @@ export default function LiveWallpaperPrivacyPolicyPage() {
               Privacy Policy
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300">
-              This page explains how Live Wallpaper handles information when you
-              use the app on iOS.
+              This Privacy Policy explains how <strong>Live Wallpaper</strong>{" "}
+              (&quot;the App&quot;) handles information when you use it on iOS.
+              By using the App, you agree to this policy.
             </p>
           </div>
 
@@ -89,9 +98,14 @@ export default function LiveWallpaperPrivacyPolicyPage() {
           <div className="space-y-10 px-6 py-10 sm:px-10 lg:px-14 lg:py-12">
             <Section title="Introduction">
               <p>
-                Live Wallpaper lets you create Live Photos from your videos and
-                browse or download live wallpapers from our Store, including
-                free items and paid unlocks through Apple.
+                This Privacy Policy explains how <strong>Live Wallpaper</strong>{" "}
+                (&quot;the App&quot;) handles information when you use it on
+                iOS. By using the App, you agree to this policy.
+              </p>
+              <p>
+                The App lets you create Live Photos from your videos and browse
+                or download live wallpapers from our Store, including free items
+                and paid unlocks through Apple.
               </p>
             </Section>
 
@@ -101,12 +115,12 @@ export default function LiveWallpaperPrivacyPolicyPage() {
                   Photos on your device
                 </h3>
                 <p>
-                  With your permission, Live Wallpaper may access your Photo
-                  Library so you can choose a video and save Live Photos you
-                  create or download. We use this only to provide those
-                  features. Your photos and videos stay under your control on
-                  your device and in your Apple account settings (including
-                  iCloud Photos, if you use it).
+                  With your permission, the App may access your Photo Library so
+                  you can choose a video and save Live Photos you create or
+                  download. We use this only to provide those features. Your
+                  photos and videos stay under your control on your device and
+                  in your Apple account settings (including iCloud Photos, if
+                  you use it).
                 </p>
               </div>
 
@@ -115,9 +129,9 @@ export default function LiveWallpaperPrivacyPolicyPage() {
                   Store and internet features
                 </h3>
                 <p>
-                  When you use the Store, the Live Wallpaper needs an internet
-                  connection to show available wallpapers and to download the
-                  ones you choose (free or after purchase).
+                  When you use the Store, the App needs an internet connection
+                  to show available wallpapers and to download the ones you
+                  choose (free or after purchase).
                 </p>
               </div>
 
@@ -140,11 +154,10 @@ export default function LiveWallpaperPrivacyPolicyPage() {
                   What we do not collect in the current App
                 </h3>
                 <p>
-                  Live Wallpaper does not ask you to create an account or sign
-                  in. We do not intentionally collect your name, email, or
-                  password through the App, and we do not use your location,
-                  contacts, microphone, or camera for the core features
-                  described above.
+                  The App does not ask you to create an account or sign in. We
+                  do not intentionally collect your name, email, or password
+                  through the App, and we do not use your location, contacts,
+                  microphone, or camera for the core features described above.
                 </p>
               </div>
             </Section>
@@ -181,9 +194,9 @@ export default function LiveWallpaperPrivacyPolicyPage() {
 
             <Section title="Children">
               <p>
-                Live Wallpaper is not directed at children under 13 (or the
-                minimum age required where you live). We do not knowingly
-                collect information from children.
+                The App is not directed at children under 13 (or the minimum age
+                required where you live). We do not knowingly collect
+                information from children.
               </p>
             </Section>
 
@@ -213,7 +226,7 @@ export default function LiveWallpaperPrivacyPolicyPage() {
                 <strong>Email:</strong> hi@birdswims.com
               </p>
               <p>
-                <strong>Developer:</strong> Birdswims
+                <strong>Developer:</strong> Birdswims LLP
               </p>
             </Section>
 
