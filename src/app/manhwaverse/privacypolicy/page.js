@@ -82,8 +82,8 @@ export default function ManhwaversePrivacyPolicyPage() {
 
             <Section title="Children">
               <p>
-                The app is not directed at children under 16. Do not use the
-                app if you are under the minimum age required in your region.
+                The app is not directed at children under 16. Do not use the app
+                if you are under the minimum age required in your region.
               </p>
             </Section>
 
@@ -107,6 +107,7 @@ export default function ManhwaversePrivacyPolicyPage() {
                 Privacy questions can be sent via Support in Settings (
                 <strong>hi@birdswims.com</strong>).
               </p>
+              <p>&copy; Birdswims. All rights reserved.</p>
             </Section>
           </div>
         </div>

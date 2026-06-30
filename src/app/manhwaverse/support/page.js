@@ -1,6 +1,7 @@
 export const metadata = {
   title: "Manhwaverse Support | Birdswims",
-  description: "Support information and frequently asked questions for Manhwaverse.",
+  description:
+    "Support information and frequently asked questions for Manhwaverse.",
 };
 
 const infoItems = [
@@ -140,8 +141,8 @@ export default function ManhwaverseSupportPage() {
               <p>
                 Manhwaverse stores your library data locally on your device.
                 When you use Discover or search, the app may request catalog
-                data from external services. For more information, please
-                review our Privacy Policy.
+                data from external services. For more information, please review
+                our Privacy Policy.
               </p>
             </Section>
 
@@ -151,6 +152,7 @@ export default function ManhwaverseSupportPage() {
                 <strong>hi@birdswims.com</strong> and we&apos;ll do our best to
                 help.
               </p>
+              <p>&copy; Birdswims. All rights reserved.</p>
             </Section>
           </div>
         </div>
