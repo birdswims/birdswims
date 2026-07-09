@@ -1,4 +1,4 @@
-import BlurifyLegalShell from "../BlurifyLegalShell";
+import BlurifyLegalShell, { LegalCard } from "../BlurifyLegalShell";
 
 export const metadata = {
   title: "Terms of Use · Blurify",
@@ -12,14 +12,14 @@ export default function BlurifyTermsPage() {
       meta="Last updated: July 9, 2026 · Blurify for iOS"
       active="terms"
     >
-      <div className="blurify-card">
+      <LegalCard>
         <p>
           These Terms of Use (“Terms”) govern your use of the Blurify mobile
           application (“App”) provided by Birdswims LLP (“we”, “us”). By
           downloading or using Blurify, you agree to these Terms. If you do not
           agree, do not use the App.
         </p>
-      </div>
+      </LegalCard>
 
       <h2>1. The App</h2>
       <p>

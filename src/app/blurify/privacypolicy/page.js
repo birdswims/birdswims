@@ -1,4 +1,4 @@
-import BlurifyLegalShell from "../BlurifyLegalShell";
+import BlurifyLegalShell, { LegalCard } from "../BlurifyLegalShell";
 
 export const metadata = {
   title: "Privacy Policy · Blurify",
@@ -12,13 +12,13 @@ export default function BlurifyPrivacyPolicyPage() {
       meta="Last updated: July 9, 2026 · Effective for Blurify on iOS"
       active="privacy"
     >
-      <div className="blurify-card">
+      <LegalCard>
         <p>
           <strong>Short version:</strong> Blurify processes photos on your
           device. We do not require an account, do not show ads, and do not sell
           your personal information.
         </p>
-      </div>
+      </LegalCard>
 
       <h2>1. Who we are</h2>
       <p>
@@ -51,9 +51,7 @@ export default function BlurifyPrivacyPolicyPage() {
 
       <h2>3. How we use information</h2>
       <ul>
-        <li>
-          To display camera preview and apply filters/effects you choose.
-        </li>
+        <li>To display camera preview and apply filters/effects you choose.</li>
         <li>
           To save photos you capture or export to your Photo Library (when you
           allow it).

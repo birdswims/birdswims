@@ -1,179 +1,88 @@
 import Link from "next/link";
 
 const nav = [
-  { href: "/blurify/privacypolicy", label: "Privacy" },
-  { href: "/blurify/terms", label: "Terms" },
-  { href: "/blurify/support", label: "Support" },
+  { href: "/blurify/privacypolicy", label: "Privacy", key: "privacy" },
+  { href: "/blurify/terms", label: "Terms", key: "terms" },
+  { href: "/blurify/support", label: "Support", key: "support" },
 ];
 
 /** Minimal dark theme matching the original Blurify legal pages. */
-export default function BlurifyLegalShell({
-  title,
-  meta,
-  children,
-  active,
-}) {
+export default function BlurifyLegalShell({ title, meta, children, active }) {
   return (
-    <main
-      className="min-h-screen px-5 pb-20 pt-10 sm:px-6"
-      style={{
-        background: "#0a0a0a",
-        color: "#f2f2f2",
-        fontFamily:
-          '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
-        lineHeight: 1.6,
-      }}
-    >
-      <div className="mx-auto w-full" style={{ maxWidth: 720 }}>
-        <header
-          className="mb-8 flex items-center justify-between gap-4 pb-5"
-          style={{ borderBottom: "1px solid #2a2a2a" }}
-        >
+    <main className="min-h-screen bg-[#0a0a0a] px-5 pb-20 pt-10 text-[#f2f2f2] sm:px-6">
+      <div className="mx-auto w-full max-w-[720px]">
+        <header className="mb-8 flex items-center justify-between gap-4 border-b border-[#2a2a2a] pb-5">
           <Link
             href="https://birdswims.com"
-            className="no-underline"
-            style={{
-              color: "#f2f2f2",
-              fontWeight: 700,
-              fontSize: 22,
-              letterSpacing: "-0.02em",
-            }}
+            className="text-[22px] font-bold tracking-[-0.02em] text-[#f2f2f2] no-underline"
           >
             blurify
           </Link>
           <nav className="flex flex-wrap items-center justify-end gap-x-3.5 gap-y-1">
-            {nav.map((item) => {
-              const isActive = active === item.label.toLowerCase();
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="no-underline text-sm transition-colors"
-                  style={{ color: isActive ? "#f2f2f2" : "#9a9a9a" }}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+            {nav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm no-underline ${
+                  active === item.key ? "text-[#f2f2f2]" : "text-[#9a9a9a]"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
         </header>
 
-        <h1
-          className="m-0 mb-2"
-          style={{
-            fontSize: 34,
-            lineHeight: 1.15,
-            letterSpacing: "-0.03em",
-            fontWeight: 700,
-            color: "#f2f2f2",
-          }}
-        >
+        <h1 className="m-0 mb-2 text-[34px] font-bold leading-[1.15] tracking-[-0.03em] text-[#f2f2f2]">
           {title}
         </h1>
         {meta ? (
-          <p className="mb-7 mt-0 text-sm" style={{ color: "#9a9a9a" }}>
-            {meta}
-          </p>
+          <p className="mb-7 mt-0 text-sm text-[#9a9a9a]">{meta}</p>
         ) : null}
 
-        <div className="blurify-legal-body">{children}</div>
+        <div className="text-base leading-relaxed text-[#d8d8d8] [&_a]:text-[#f2f2f2] [&_h2]:mb-2.5 [&_h2]:mt-7 [&_h2]:text-lg [&_h2]:font-semibold [&_h2]:text-[#f2f2f2] [&_li]:mb-1.5 [&_li]:text-[#d8d8d8] [&_p]:mb-3 [&_p]:text-[#d8d8d8] [&_strong]:font-semibold [&_strong]:text-[#f2f2f2] [&_ul]:mb-3 [&_ul]:list-disc [&_ul]:pl-5">
+          {children}
+        </div>
 
-        <footer
-          className="mt-12 pt-4 text-[13px]"
-          style={{ borderTop: "1px solid #2a2a2a", color: "#9a9a9a" }}
-        >
+        <footer className="mt-12 border-t border-[#2a2a2a] pt-4 text-[13px] text-[#9a9a9a]">
           © Birdswims LLP · Blurify ·{" "}
           <a
             href="mailto:hi@birdswims.com"
-            style={{ color: "#f2f2f2", textDecoration: "none" }}
+            className="text-[#f2f2f2] no-underline"
           >
             hi@birdswims.com
           </a>
         </footer>
       </div>
-
-      <style jsx global>{`
-        .blurify-legal-body h2 {
-          font-size: 18px;
-          font-weight: 600;
-          margin: 28px 0 10px;
-          color: #f2f2f2;
-        }
-        .blurify-legal-body p,
-        .blurify-legal-body li {
-          color: #d8d8d8;
-          font-size: 16px;
-        }
-        .blurify-legal-body p {
-          margin: 0 0 12px;
-        }
-        .blurify-legal-body ul {
-          padding-left: 20px;
-          margin: 0 0 12px;
-        }
-        .blurify-legal-body li {
-          margin-bottom: 6px;
-        }
-        .blurify-legal-body a {
-          color: #f2f2f2;
-        }
-        .blurify-legal-body strong {
-          color: #f2f2f2;
-          font-weight: 600;
-        }
-        .blurify-card {
-          background: #141414;
-          border: 1px solid #2a2a2a;
-          border-radius: 18px;
-          padding: 22px 20px;
-          margin: 16px 0;
-        }
-        .blurify-card p:last-child {
-          margin-bottom: 0;
-        }
-        .blurify-btn {
-          display: inline-block;
-          background: #fff;
-          color: #000 !important;
-          text-decoration: none;
-          font-weight: 600;
-          border-radius: 12px;
-          padding: 12px 16px;
-          margin: 6px 8px 6px 0;
-          font-size: 14px;
-        }
-        .blurify-btn-secondary {
-          display: inline-block;
-          background: transparent;
-          color: #fff !important;
-          text-decoration: none;
-          font-weight: 600;
-          border-radius: 12px;
-          padding: 12px 16px;
-          margin: 6px 8px 6px 0;
-          font-size: 14px;
-          border: 1px solid #2a2a2a;
-        }
-        .blurify-legal-body table {
-          width: 100%;
-          border-collapse: collapse;
-          margin: 12px 0 16px;
-        }
-        .blurify-legal-body th,
-        .blurify-legal-body td {
-          border: 1px solid #2a2a2a;
-          padding: 10px 12px;
-          text-align: left;
-          vertical-align: top;
-          font-size: 14px;
-          color: #d8d8d8;
-        }
-        .blurify-legal-body th {
-          background: #141414;
-          color: #f2f2f2;
-          font-weight: 600;
-        }
-      `}</style>
     </main>
+  );
+}
+
+export function LegalCard({ children }) {
+  return (
+    <div className="my-4 rounded-[18px] border border-[#2a2a2a] bg-[#141414] px-5 py-[22px] [&_p:last-child]:mb-0">
+      {children}
+    </div>
+  );
+}
+
+export function LegalButton({ href, children, secondary = false }) {
+  if (secondary) {
+    return (
+      <a
+        href={href}
+        className="mr-2 mt-1.5 inline-block rounded-xl border border-[#2a2a2a] bg-transparent px-4 py-3 text-sm font-semibold text-white no-underline"
+      >
+        {children}
+      </a>
+    );
+  }
+  return (
+    <a
+      href={href}
+      className="mr-2 mt-1.5 inline-block rounded-xl bg-white px-4 py-3 text-sm font-semibold text-black no-underline"
+    >
+      {children}
+    </a>
   );
 }

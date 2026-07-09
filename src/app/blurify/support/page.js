@@ -1,4 +1,4 @@
-import BlurifyLegalShell from "../BlurifyLegalShell";
+import BlurifyLegalShell, { LegalCard, LegalButton } from "../BlurifyLegalShell";
 
 export const metadata = {
   title: "Support · Blurify",
@@ -12,8 +12,8 @@ export default function BlurifySupportPage() {
       meta="We’re here to help with Blurify on iPhone."
       active="support"
     >
-      <div className="blurify-card">
-        <h2 style={{ marginTop: 0 }}>Contact</h2>
+      <LegalCard>
+        <h2 className="!mt-0">Contact</h2>
         <p>
           Email:{" "}
           <a href="mailto:hi@birdswims.com?subject=Blurify%20Support">
@@ -26,17 +26,14 @@ export default function BlurifySupportPage() {
           editor or camera.
         </p>
         <p>
-          <a
-            className="blurify-btn"
-            href="mailto:hi@birdswims.com?subject=Blurify%20Support"
-          >
+          <LegalButton href="mailto:hi@birdswims.com?subject=Blurify%20Support">
             Email support
-          </a>
+          </LegalButton>
         </p>
-      </div>
+      </LegalCard>
 
       <h2>Common questions</h2>
-      <div className="blurify-card">
+      <LegalCard>
         <p>
           <strong>Camera won’t open</strong>
           <br />
@@ -75,7 +72,7 @@ export default function BlurifySupportPage() {
           Delete items from the in‑app gallery, remove photos from the Photos
           app if saved there, or uninstall Blurify to clear local app storage.
         </p>
-      </div>
+      </LegalCard>
 
       <h2>Legal</h2>
       <p>
